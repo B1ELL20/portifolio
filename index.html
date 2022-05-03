@@ -15,6 +15,37 @@
 
     <link rel="stylesheet" href="estilo.css">
 
+    <!-- Scripts -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready( ()=> {
+            $('#bt1').on('click', () => {
+                window.open('https://github.com/B1ELL20', '_blank')
+            })
+
+            $('#img1').hover(function() {
+                $(this).html('')
+            }, function() {
+                $(this).html('<h3 class="display-4 text-light pt-5">Dashboard</h3>')
+            })
+
+            $('.cxpj').hover( function() {
+                $(this).animate({'padding-right': '10px'}, 300)
+            }, function() {
+                $(this).animate({'padding-right': "0px"}, 300)
+            })
+
+            $('.caixac').hover( function() {
+                $(this).animate({'margin-top': '2px'}, 300)
+            }, function() {
+                $(this).animate({'margin-top': "0px"}, 300)
+            })
+        })
+
+    </script>
+
 </head>
 <body>
 
@@ -26,8 +57,12 @@
                         <h1 class="display-3 mb-4 text-light">Gabriel Dantas</h1>
                         <h4 class="mb-5 text-light">Dev Full-Stack</h4>
                         <div class="input-group mb-2">
-                            <button class="form-control bt1 btn btn-primary"><i class="fa-brands fa-github pe-1"></i>GitHub</button>
-                            <button class="form-control bt2 btn btn-primary"><i class="fa-brands fa-linkedin pe-1"></i>Linkedin</button>
+                            <button class="form-control bt1 btn btn-primary" id="bt1">
+                                <i class="fa-brands fa-github pe-1"></i>GitHub
+                            </button>
+                            <button class="form-control bt2 btn btn-primary" id="bt2">
+                                <i class="fa-brands fa-linkedin pe-1"></i>Linkedin
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -38,7 +73,7 @@
         <div class="container">
             <section class="row d-flex justify-content-around mb-5">
                 <div class="col-md-6 mt-5">
-                    <div class="card caixa">
+                    <div class="card caixa" id="caixaeu">
                         <div class="card-header ch">
                             <img src="WhatsApp Image 2022-05-02 at 18.27.31.jpeg" width="150px" height="150px" alt="">
                             <h4 class="display-4 text-light">Quem sou eu?</h4>
@@ -50,22 +85,24 @@
                 </div>
                 <div class="col-md-5 mt-5">
                     <div>
-                        <h1 class="display-4 titulos">Meus certificados</h1>
+                        <h1 class="display-3 titulos">Meus certificados</h1>
                         <hr>
                         <div class="d-flex justify-content-around mt-5 flex-sm-wrap">
 
-                            <div class="card caixa mb-3">
+                            <div class="card caixa mb-3 caixac">
                                 <div class="card-header certificado-foto">
                                     <h2 class="text-light pt-5">MySQL</h2>
                                 </div>
                                 <div class="card-body certificado-corpo">
-                                    <button class="btn btn-primary">
-                                        <i class="fa-solid fa-check-to-slot h4 pt-1"></i>
-                                    </button>
+                                    <a target="_blank" href="https://www.cursoemvideo.com/certificates/certificado/?course_id=25971&cert-nonce=2346e39d13">
+                                        <button class="btn btn-primary">
+                                            <i class="fa-solid fa-check-to-slot h4 pt-1"></i>
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
 
-                            <div class="card caixa">
+                            <div class="card caixa mb-3 caixac">
                                 <div class="card-header certificado-foto">
                                     <h1 class="text-light pt-3">Full-stack</h1>
                                 </div>
@@ -88,27 +125,27 @@
                     <div class="row">
                         <h1 class="display-1 titulos mb-5">Projetos</h1>
                         <div class="col">    
-                            <div class="row caixa caixa-projeto">
-                                <div class="col-3 imagem">
+                            <div class="row caixa caixa-projeto cxpj" >
+                                <div class="col-md-3 imagem img1" id="img1">
                                     <h3 class="display-4 text-light pt-5">Dashboard</h3>
                                 </div>
-                                <div class="col-9 caixa-texto">
+                                <div class="col-md-9 caixa-texto">
                                     <p class="font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
                                 </div>
                             </div>
-                            <div class="row caixa caixa-projeto mt-5">
-                                <div class="col-3 imagem">
+                            <div class="row caixa caixa-projeto mt-5 cxpj">
+                                <div class="col-md-3 imagem">
                                     <h3 class="display-4 text-light pt-4">Tela de Login</h3>
                                 </div>
-                                <div class="col-9 caixa-texto">
+                                <div class="col-md-9 caixa-texto">
                                     <p class="font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
                                 </div>
                             </div>
-                            <div class="row caixa caixa-projeto mt-5 mb-5">
-                                <div class="col-3 imagem">
+                            <div class="row caixa caixa-projeto mt-5 mb-5 cxpj">
+                                <div class="col-md-3 imagem">
                                     <h3 class="display-4 text-light pt-4">Landing Page</h3>
                                 </div>
-                                <div class="col-9 caixa-texto">
+                                <div class="col-md-9 caixa-texto">
                                     <p class="font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
                                 </div>
                             </div>
@@ -119,9 +156,9 @@
         </div>
     </main>
     <footer>
-        <div class="text-light d-flex justify-content-center mt-2 flex-sm-wrap"><p class="d-inline ps-3 pe-3"><i class="fa-solid fa-envelope h4 pe-1"></i> email: dantasbiell20@gmail.com</p> | 
+        <div class="text-light d-flex justify-content-center mt-2 flex-sm-wrap ft"><p class="d-inline mr-3 ml-3"><i class="fa-solid fa-envelope h4 pe-1"></i> email: dantasbiell20@gmail.com</p> | 
              <p class="d-inline ps-3 pe-3"><i class="fa-brands fa-whatsapp h4 pe-1"></i>  whatsapp: (75) 99135-9299</p>
-             <a href="" class="text-light h3 pe-3 ps-3"><i class="fa-brands fa-github"></i></a>
+             <a href="https://github.com/B1ELL20" target="_blank" class="text-light h3 pe-3 ps-3"><i class="fa-brands fa-github"></i></a>
             <a href="" class="text-light h3 pe-3 ps-3"><i class="fa-brands fa-linkedin"></i></a>
         </div>
         
