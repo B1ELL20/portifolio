@@ -33,6 +33,18 @@
                 $(this).html('<h3 class="display-4 text-light pt-5">Dashboard</h3>')
             })
 
+            $('#img2').hover(function() {
+                $(this).html('')
+            }, function() {
+                $(this).html('<h3 class="display-4 text-light pt-3">Tela de Login</h3>')
+            })
+
+            $('#img3').hover(function() {
+                $(this).html('')
+            }, function() {
+                $(this).html('<h3 class="display-4 text-light pt-3">Landing Page</h3>')
+            })
+
             $('.cxpj').hover( function() {
                 $(this).animate({'padding-right': '10px'}, 300)
             }, function() {
@@ -127,30 +139,36 @@
                     <div class="row">
                         <h1 class="display-1 titulos mb-5">Projetos</h1>
                         <div class="col">    
-                            <div class="row caixa caixa-projeto cxpj" >
-                                <div class="col-md-3 imagem img1" id="img1">
-                                    <h3 class="display-4 text-light pt-5">Dashboard</h3>
+                            <a href="http://appmydashboard.epizy.com/index.html" target="_blank">
+                                <div class="row caixa caixa-projeto cxpj" >
+                                    <div class="col-md-3 imagem img1" id="img1">
+                                        <h3 class="display-4 text-light pt-5">Dashboard</h3>
+                                    </div>
+                                    <div class="col-md-9 caixa-texto">
+                                        <p class="font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
+                                    </div>
                                 </div>
-                                <div class="col-md-9 caixa-texto">
-                                    <p class="font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
+                            </a>
+                            <a href="http://paginalogin.epizy.com/" target="_blank">
+                                <div class="row caixa caixa-projeto mt-5 cxpj">
+                                    <div class="col-md-3 img2 imagem" id="img2">
+                                        <h3 class="display-4 text-light pt-4">Tela de Login</h3>
+                                    </div>
+                                    <div class="col-md-9 caixa-texto">
+                                        <p class="font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row caixa caixa-projeto mt-5 cxpj">
-                                <div class="col-md-3 imagem">
-                                    <h3 class="display-4 text-light pt-4">Tela de Login</h3>
+                            </a>
+                            <a href="#">
+                                <div class="row caixa caixa-projeto mt-5 mb-5 cxpj">
+                                    <div class="col-md-3 imagem img3" id="img3">
+                                        <h3 class="display-4 text-light pt-4">Landing Page</h3>
+                                    </div>
+                                    <div class="col-md-9 caixa-texto">
+                                        <p class="font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
+                                    </div>
                                 </div>
-                                <div class="col-md-9 caixa-texto">
-                                    <p class="font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
-                                </div>
-                            </div>
-                            <div class="row caixa caixa-projeto mt-5 mb-5 cxpj">
-                                <div class="col-md-3 imagem">
-                                    <h3 class="display-4 text-light pt-4">Landing Page</h3>
-                                </div>
-                                <div class="col-md-9 caixa-texto">
-                                    <p class="font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>

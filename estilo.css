@@ -26,6 +26,16 @@ a:hover {
     background-size: cover;
 }
 
+.img2:hover {
+    background: url(login.png);
+    background-size: cover;
+}
+
+.img3:hover {
+    background: url(lp.png);
+    background-size: cover;
+}
+
 .bt1 {
     border-right-color: white;
 }
@@ -136,4 +146,8 @@ footer {
         border-radius: 0px 0px 10px 10px;
         color: #27435C;
     }
+}
+
+a {
+    text-decoration: none;
 }
