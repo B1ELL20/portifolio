@@ -45,39 +45,68 @@
                 $(this).html('<h3 class="display-4 text-light pt-3">Landing Page</h3>')
             })
 
-            $('.cxpj').hover( function() {
-                $(this).animate({'padding-right': '10px'}, 300)
-            }, function() {
-                $(this).animate({'padding-right': "0px"}, 300)
-            })
+            const elemento = document.getElementById('#texto-superior')
+            const texto = "print(Hello World!) <br>...<br> Hello World! <br> <br> De um programador para o mundo     "
 
-            $('.caixac').hover( function() {
-                $(this).animate({'margin-top': '2px'}, 300)
-            }, function() {
-                $(this).animate({'margin-top': "0px"}, 300)
-            })
+            let texto_separado = texto.split("")
+            
+            let texto_junto = ''
+
+            let count = 0;
+
+            const funcao = setInterval(() => {
+                texto_junto += texto_separado[count]
+                $('#texto-superior').html(texto_junto);
+                count += 1;
+                if(count >= texto_separado.length) {
+                    $('#texto-superior').html('');
+                    texto_junto = ''
+                    count = 0
+                }
+            }, 150) 
         })
 
     </script>
 
 </head>
 <body>
-
-    <header class="cabeca">
+    <nav id="navegacao" class="navbar navbar-expand-md bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="menu" aria-expanded="false" data-target="#navbarmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarmenu">
+                <div class="navbar-nav ms-auto me-5 text-light">
+                    <a href="#cabeca" class="nav-link links p-3" id="links_id">HOME</a>
+                    <a href="#sobre-mim" class="nav-link links p-3" id="links_id">QUEM SOU</a>
+                    <a href="#conhecimentos" class="nav-link links p-3" id="links_id">CONHECIMENTOS</a>
+                    <a href="#projetos" class="nav-link links p-3" id="links_id">O QUE FIZ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="cabeca bg-dark" id="cabeca">
         <div class="container">
-            <div class="row mt-3">
-                <div class="col-md-6 mt-md-5">
+            <div class="row">
+                <div class="col-md-6 capa">
                     <div class="d-flex justify-content-center flex-wrap capa">
                         <h1 class="display-3 mb-4 text-light">Gabriel Dantas</h1>
                         <h4 class="mb-5 text-light">Dev Full-Stack</h4>
                         <div class="input-group mb-2">
-                            <button class="form-control bt1 btn btn-primary" id="bt1">
+                            <button class="form-control bt1 btn btn-outline-light" id="bt1">
                                 <i class="fa-brands fa-github pe-1"></i>GitHub
                             </button>
-                            <button class="form-control bt2 btn btn-primary" id="bt2">
+                            <button class="form-control bt2 btn btn-outline-light btn-lg" id="bt2">
                                 <i class="fa-brands fa-linkedin pe-1"></i>Linkedin
                             </button>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-6 capa">
+                    <div class="">
+                        <p class="text-light font-monospace texto-automatico" id="texto-superior">
+                            
+                        </p>
                     </div>
                 </div>
             </div>
@@ -85,87 +114,91 @@
     </header>
     <main>
         <div class="container">
-            <section class="row d-flex justify-content-around mb-5">
+            <section class="row d-flex justify-content-around mb-5" id="sobre-mim">
                 <div class="col-md-6 mt-5">
-                    <div class="card caixa" id="caixaeu">
-                        <div class="card-header ch">
-                            <img src="WhatsApp Image 2022-05-02 at 18.27.31.jpeg" width="150px" height="150px" alt="">
-                            <h4 class="display-4 text-light">Quem sou eu?</h4>
-                        </div>
-                        <div class="card-body cb">
-                            <p>Me chamo <strong>Gabriel Dantas Costa Carneiro</strong>, sou um desenvolvedor full-stack voltado a HTML, CSS, Bootstrap, JavaScript, Jquery, PHP e MySQL. Venho caminhando por esse mundo da programação cerca de 1 ano, desenvolvendo, aprendendo e evoluindo, em busca de sites cada vez mais incriveis e profissionais!</p>
-                        </div>
-                    </div>
+
+                    <h1 class="display-1 text-dark mb-5">QUEM SOU?</h1>
+  
+                    <p class="p-1 text-dark">Me chamo <strong>Gabriel Dantas Costa Carneiro</strong>, sou um desenvolvedor full-stack voltado a HTML, CSS, Bootstrap, JavaScript, Jquery, PHP e MySQL. Venho caminhando por esse mundo da programação cerca de 1 ano, desenvolvendo, aprendendo e evoluindo, em busca de sites cada vez mais incriveis e profissionais!</p>
+
                 </div>
-                <div class="col-md-5 mt-5">
-                    <div>
-                        <h1 class="display-3 titulos">Meus certificados</h1>
-                        <hr>
-                        <div class="d-flex justify-content-around mt-5 flex-sm-wrap">
-
-                            <div class="card caixa mb-3 caixac">
-                                <div class="card-header certificado-foto">
-                                    <h2 class="text-light pt-5">MySQL</h2>
-                                </div>
-                                <div class="card-body certificado-corpo">
-                                    <a target="_blank" href="https://www.cursoemvideo.com/certificates/certificado/?course_id=25971&cert-nonce=2346e39d13">
-                                        <button class="btn btn-primary">
-                                            <i class="fa-solid fa-check-to-slot h4 pt-1"></i>
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="card caixa mb-3 caixac">
-                                <div class="card-header certificado-foto">
-                                    <h1 class="text-light pt-3">Full-stack</h1>
-                                </div>
-                                <div class="card-body certificado-corpo">
-                                    <button class="btn btn-primary">
-                                        <i class="fa-solid fa-check-to-slot h4 pt-1"></i>
-                                    </button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-5 mt-5" class="caixa-foto">
+                    <img src="Eu.jpeg" alt="Minha foto" width="400px" height="450px" class="foto">
                 </div>
             </section>
             
             <hr>
 
+            <section id="conhecimentos">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="display-1 text-dark mb-5">O que sei</h1>
+                        <div class="d-flex justify-content-md-between pb-5 pt-5">
+                            <div>
+                                <img src="bootstrap.png" alt="" width="200px" height="200px">
+                            </div>
+
+                            <div>
+                                <img src="mysql.png" alt="" width="200px" height="200px">
+                            </div>
+
+                            <div>
+                                <img src="html.webp" alt="" width="200px" height="200px">
+                            </div>
+
+                            <div>
+                                <img src="JavaScript-logo.png" alt="" width="350px" height="200px">
+                            </div>
+
+                            <div>
+                                <img src="css3.png" alt="" width="150px" height="200px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section>
+                <div class="text-light bg-dark p-3 box-info mb-5">
+                    <h1 class="display-3">Titulo</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae vero eligendi illum doloremque! Eaque explicabo aspernatur sequi cum qui, molestiae asperiores, vitae, enim tempore sint minima doloribus tempora nisi. At?</p>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="projetos">
                 <div class="container">
                     <div class="row">
-                        <h1 class="display-1 titulos mb-5">Projetos</h1>
+                        <h1 class="display-1 titulos mb-5 text-dark">Projetos</h1>
                         <div class="col">    
                             <a href="http://appmydashboard.epizy.com/index.html" target="_blank">
-                                <div class="row caixa caixa-projeto cxpj" >
+                                <div class="row caixa caixa-projeto cxpj bg-light text-dark" >
                                     <div class="col-md-3 imagem img1" id="img1">
                                         <h3 class="display-4 text-light pt-5">Dashboard</h3>
                                     </div>
                                     <div class="col-md-9 caixa-texto">
-                                        <p class="font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
+                                        <p class="font-monospace ps-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
                                     </div>
                                 </div>
                             </a>
                             <a href="http://paginalogin.epizy.com/" target="_blank">
-                                <div class="row caixa caixa-projeto mt-5 cxpj">
+                                <div class="row caixa caixa-projeto mt-5 cxpj text-black">
                                     <div class="col-md-3 img2 imagem" id="img2">
                                         <h3 class="display-4 text-light pt-4">Tela de Login</h3>
                                     </div>
                                     <div class="col-md-9 caixa-texto">
-                                        <p class="font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
+                                        <p class="font-monospace ps-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
                                     </div>
                                 </div>
                             </a>
                             <a href="#">
-                                <div class="row caixa caixa-projeto mt-5 mb-5 cxpj">
+                                <div class="row caixa caixa-projeto mt-5 mb-5 cxpj text-black">
                                     <div class="col-md-3 imagem img3" id="img3">
                                         <h3 class="display-4 text-light pt-4">Landing Page</h3>
                                     </div>
                                     <div class="col-md-9 caixa-texto">
-                                        <p class="font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
+                                        <p class="font-monospace ps-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
                                     </div>
                                 </div>
                             </a>
@@ -175,7 +208,7 @@
             </section>
         </div>
     </main>
-    <footer>
+    <footer class="bg-dark">
         <div class="text-light d-flex justify-content-center mt-2 flex-sm-wrap ft"><p class="d-inline mr-3 ml-3"><i class="fa-solid fa-envelope h4 pe-1"></i> email: dantasbiell20@gmail.com</p> | 
              <p class="d-inline ps-3 pe-3"><i class="fa-brands fa-whatsapp h4 pe-1"></i>  whatsapp: (75) 99135-9299</p>
              <a href="https://github.com/B1ELL20" target="_blank" class="text-light h3 pe-3 ps-3"><i class="fa-brands fa-github"></i></a>

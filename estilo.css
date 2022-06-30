@@ -1,3 +1,5 @@
+
+
 body {
     background-color: white;
 }
@@ -6,7 +8,47 @@ p {
 }
 .cabeca {
     padding-bottom: 50px;
-    border: 1px solid #5EA1DB;
+    height: 100vh;
+}
+
+#navegacao {
+    position: sticky;
+    padding: 0px;
+    top:0;
+    opacity: 90%;
+}
+
+.capa {
+
+    margin-top: 100px;
+}
+
+.links {
+    font-weight: bold;
+}
+
+#links_id {
+    color: white;
+}
+
+#links_id:hover {
+    background-color: white;
+    color: black;
+    padding-top: 8px;
+}
+
+.texto-automatico {
+    font-size: 30px;
+    padding: 40px 10px 10px 100px;
+}
+
+.foto {
+    border: 10px solid white;
+    border-radius: 50px;
+}
+
+.box-info {
+    border-radius: 0px 10px 0px 10px;
 }
 
 a:hover {
@@ -15,7 +57,7 @@ a:hover {
 
 .imagem {
     height: 200px;
-    background-color: #5EA1DB;
+    background-color: #292b2c;
     background-size: cover;
     border-radius: 10px 0px 0px 10px;
     text-align: center;
@@ -49,9 +91,8 @@ a:hover {
 } 
 
 .caixa-texto {
-    background-color: #b5d7fae8;
     border-radius: 0px 10px 10px 0px;
-    color: #27435C;
+    border: 3px solid rgba(0, 0, 0, 0.849);
 }
 
 .caixa-texto p {
@@ -60,7 +101,7 @@ a:hover {
 }
 
 .ch {
-    background-color: #5EA1DB;
+    background-color: gray;
     text-align: center;
 }
 
@@ -103,11 +144,7 @@ header {
 }
 
 .caixa-projeto:hover {
-    background-color: #5EA1DB;
-}
-
-.titulos {
-    color: #27435C;
+    background-color: gray;
 }
 
 footer {
@@ -144,7 +181,7 @@ footer {
     .caixa-texto {
         background-color: #b5d7fae8;
         border-radius: 0px 0px 10px 10px;
-        color: #27435C;
+        
     }
 }
 
