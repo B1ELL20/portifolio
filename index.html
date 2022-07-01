@@ -27,26 +27,8 @@
                 window.open('https://github.com/B1ELL20', '_blank')
             })
 
-            $('#img1').hover(function() {
-                $(this).html('')
-            }, function() {
-                $(this).html('<h3 class="display-4 text-light pt-5">Dashboard</h3>')
-            })
-
-            $('#img2').hover(function() {
-                $(this).html('')
-            }, function() {
-                $(this).html('<h3 class="display-4 text-light pt-3">Tela de Login</h3>')
-            })
-
-            $('#img3').hover(function() {
-                $(this).html('')
-            }, function() {
-                $(this).html('<h3 class="display-4 text-light pt-3">Landing Page</h3>')
-            })
-
             const elemento = document.getElementById('#texto-superior')
-            const texto = "print(Hello World!) <br>...<br> Hello World! <br> <br> De um programador para o mundo     "
+            const texto = "print(Hello World!) <br>...<br> Hello World! <br> <br> De um programador para o mundo!     "
 
             let texto_separado = texto.split("")
             
@@ -63,14 +45,14 @@
                     texto_junto = ''
                     count = 0
                 }
-            }, 150) 
+            }, 120) 
         })
 
     </script>
 
 </head>
 <body>
-    <nav id="navegacao" class="navbar navbar-expand-md bg-dark">
+    <nav id="navegacao" class="navbar navbar-expand-md">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="menu" aria-expanded="false" data-target="#navbarmenu">
                 <span class="navbar-toggler-icon"></span>
@@ -85,7 +67,7 @@
             </div>
         </div>
     </nav>
-    <header class="cabeca bg-dark" id="cabeca">
+    <header class="cabeca" id="cabeca">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 capa">
@@ -119,11 +101,15 @@
 
                     <h1 class="display-1 text-dark mb-5">QUEM SOU?</h1>
   
-                    <p class="p-1 text-dark">Me chamo <strong>Gabriel Dantas Costa Carneiro</strong>, sou um desenvolvedor full-stack voltado a HTML, CSS, Bootstrap, JavaScript, Jquery, PHP e MySQL. Venho caminhando por esse mundo da programação cerca de 1 ano, desenvolvendo, aprendendo e evoluindo, em busca de sites cada vez mais incriveis e profissionais!</p>
+                    <p class="p-1 descricao">Me chamo <strong>Gabriel Dantas Costa Carneiro</strong>, sou um desenvolvedor full-stack voltado a HTML, CSS, Bootstrap, JavaScript, Jquery, PHP e MySQL. Venho caminhando por esse mundo da programação cerca de 1 ano, desenvolvendo, aprendendo e evoluindo, em busca de sites cada vez mais incriveis e profissionais!</p>
+
+                    <br>
+
+                    <p class="p-1 descricao">Criei este portifólio com apenas JavaScript, CSS e HTML. Uma boa forma de demonstrar e aplicar meus conhecimentos.</p>
 
                 </div>
                 <div class="col-md-5 mt-5" class="caixa-foto">
-                    <img src="Eu.jpeg" alt="Minha foto" width="400px" height="450px" class="foto">
+                    <img src="desenho.jpeg" alt="Minha foto" width="400px" height="450px" class="foto">
                 </div>
             </section>
             
@@ -135,23 +121,23 @@
                         <h1 class="display-1 text-dark mb-5">O que sei</h1>
                         <div class="d-flex justify-content-md-between pb-5 pt-5">
                             <div>
-                                <img src="bootstrap.png" alt="" width="200px" height="200px">
+                                <img src="bootstrap.png" alt="" width="150px" height="150px">
                             </div>
 
                             <div>
-                                <img src="mysql.png" alt="" width="200px" height="200px">
+                                <img src="mysql.png" alt="" width="150px" height="150px">
                             </div>
 
                             <div>
-                                <img src="html.webp" alt="" width="200px" height="200px">
+                                <img src="html.webp" alt="" width="150px" height="150px">
                             </div>
 
                             <div>
-                                <img src="JavaScript-logo.png" alt="" width="350px" height="200px">
+                                <img src="JavaScript-logo.png" alt="" width="300px" height="150px">
                             </div>
 
                             <div>
-                                <img src="css3.png" alt="" width="150px" height="200px">
+                                <img src="css3.png" alt="" width="100px" height="150px">
                             </div>
                         </div>
                     </div>
@@ -192,7 +178,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="#">
+                            <a href="https://b1ell20.github.io/landingPage/index.html" target="_blank">
                                 <div class="row caixa caixa-projeto mt-5 mb-5 cxpj text-black">
                                     <div class="col-md-3 imagem img3" id="img3">
                                         <h3 class="display-4 text-light pt-4">Landing Page</h3>
@@ -209,8 +195,8 @@
         </div>
     </main>
     <footer class="bg-dark">
-        <div class="text-light d-flex justify-content-center mt-2 flex-sm-wrap ft"><p class="d-inline mr-3 ml-3"><i class="fa-solid fa-envelope h4 pe-1"></i> email: dantasbiell20@gmail.com</p> | 
-             <p class="d-inline ps-3 pe-3"><i class="fa-brands fa-whatsapp h4 pe-1"></i>  whatsapp: (75) 99135-9299</p>
+        <div class="text-light d-flex justify-content-center mt-2 flex-sm-wrap ft"><p class="d-inline mr-3 ml-3"><i class="fa-solid fa-envelope h4 pe-1"></i> email: dantasbiell20@gmail.com</p>
+             <p class="d-inline ps-3 pe-3"></p>
              <a href="https://github.com/B1ELL20" target="_blank" class="text-light h3 pe-3 ps-3"><i class="fa-brands fa-github"></i></a>
             <a href="" class="text-light h3 pe-3 ps-3"><i class="fa-brands fa-linkedin"></i></a>
         </div>

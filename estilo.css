@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&display=swap');
 
 body {
     background-color: white;
@@ -9,13 +9,16 @@ p {
 .cabeca {
     padding-bottom: 50px;
     height: 100vh;
+    background: url(capa.png);
+    background-size: cover;
 }
 
 #navegacao {
+    background-color: rgb(24, 26, 28);
     position: sticky;
     padding: 0px;
     top:0;
-    opacity: 90%;
+    opacity: 95%;
 }
 
 .capa {
@@ -44,11 +47,24 @@ p {
 
 .foto {
     border: 10px solid white;
-    border-radius: 50px;
+    border-radius: 100%;
+    margin-left: 30px;
+}
+
+.descricao {
+    font-size: 21px;
+    text-align: justify;
+    font-family: 'Gentium Book Plus', serif;
 }
 
 .box-info {
     border-radius: 0px 10px 0px 10px;
+    font-family: 'Gentium Book Plus', serif;
+}
+
+.box-info p {
+    font-family: 'Gentium Book Plus', serif;
+    font-size: 20px;
 }
 
 a:hover {
@@ -57,25 +73,34 @@ a:hover {
 
 .imagem {
     height: 200px;
-    background-color: #292b2c;
+    background-color: #212529;
     background-size: cover;
     border-radius: 10px 0px 0px 10px;
     text-align: center;
 }
 
+.img1 {
+    opacity: 90%;
+}
+
+.img2 {
+    opacity: 90%;
+}
+
+.img3 {
+    opacity: 90%;
+}
+
 .img1:hover {
-    background: url(Screenshot_1.png);
-    background-size: cover;
+    opacity: 100%;
 }
 
 .img2:hover {
-    background: url(login.png);
-    background-size: cover;
+    opacity: 100%;
 }
 
 .img3:hover {
-    background: url(lp.png);
-    background-size: cover;
+    opacity: 100%;
 }
 
 .bt1 {
@@ -143,10 +168,6 @@ header {
     border-radius: 10px;
 }
 
-.caixa-projeto:hover {
-    background-color: gray;
-}
-
 footer {
     font-size: 20px;
     background-color: #5EA1DB;
@@ -171,7 +192,7 @@ footer {
 
     .imagem {
         height: 200px;
-        background-color: #5EA1DB;
+        background-color: #212529;
         background-size: cover;
         border-radius: 10px 10px 0px 0px;
         text-align: center;
@@ -179,7 +200,7 @@ footer {
     }
 
     .caixa-texto {
-        background-color: #b5d7fae8;
+        background-color: white;
         border-radius: 0px 0px 10px 10px;
         
     }
