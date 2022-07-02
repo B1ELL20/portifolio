@@ -19,6 +19,7 @@ p {
     padding: 0px;
     top:0;
     opacity: 95%;
+    z-index: 1;
 }
 
 .capa {
@@ -60,6 +61,7 @@ p {
 .box-info {
     border-radius: 0px 10px 0px 10px;
     font-family: 'Gentium Book Plus', serif;
+    height: 0px;
 }
 
 .box-info p {
@@ -209,3 +211,30 @@ footer {
 a {
     text-decoration: none;
 }
+
+/* Animações */
+
+[data-anime] {
+    opacity: 0;
+    transition: .6s;
+    z-index: 0;
+}
+
+[data-anime="top"] {
+    transform: translate(0px, -80px)
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate(0px, 0px)
+}
+
+#caixa-conteudo {
+    transition: .10s;
+}
+
+.animate-info {
+    padding: 30px;
+    height: 100px;
+}
+
