@@ -113,10 +113,10 @@
 
 </head>
 <body>
-    <nav id="navegacao" class="navbar navbar-expand-md">
+    <nav id="navegacao" class="navbar navbar-expand-md p-1">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="menu" aria-expanded="false" data-target="#navbarmenu">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler text-light botao-menu" data-toggle="collapse" data-target="#navbarmenu">
+                <i class="fas fa-bars fa-lg text-light"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarmenu">
                 <div class="navbar-nav ms-auto me-5 text-light">
@@ -133,9 +133,9 @@
             <div class="row">
                 <div class="col-md-6 capa">
                     <div class="d-flex justify-content-center flex-wrap capa">
-                        <h1 class="display-3 mb-4 text-light">Gabriel Dantas</h1>
+                        <h1 class="display-3 mb-4 text-light texto-cabeca">Gabriel Dantas</h1>
                         <h4 class="mb-5 text-light">Dev Full-Stack</h4>
-                        <div class="input-group mb-2">
+                        <div class="input-group mb-2 botoes">
                             <button class="form-control bt1 btn btn-outline-light" id="bt1">
                                 <i class="fa-brands fa-github pe-1"></i>GitHub
                             </button>
@@ -166,10 +166,10 @@
 
                     <br>
 
-                    <p class="p-1 descricao">Criei este portifólio com apenas JavaScript, CSS e HTML. Uma boa forma de demonstrar e aplicar meus conhecimentos.</p>
+                    <p class="p-1 descricao">Com conhecimentos desde o basico HTML até OO e estrutura MVC, me dedico ao ramo de desenvolvimento Web, no qual também criei esse portifólio com apenas JavaScript, CSS e HTML.</p>
 
                 </div>
-                <div class="col-md-5 mt-5" class="caixa-foto">
+                <div class="col-md-5 mt-5 d-flex justify-content-center" class="caixa-foto">
                     <img src="desenho.jpeg" alt="Minha foto" width="400px" height="450px" class="foto">
                 </div>
             </section>
@@ -180,23 +180,23 @@
                 <div class="row">
                     <div class="col">
                         <h1 class="display-1 text-dark mb-5">O que sei</h1>
-                        <div class="d-flex justify-content-md-between pb-5 pt-5">
-                            <div>
+                        <div class="d-flex justify-content-md-between pb-5 pt-5 flex-wrap justify-content-center">
+                            <div class="caixa_logo">
                                 <img src="html.webp" alt="" width="150px" height="150px" data-anime="top" id="anime1">
                             </div>
 
-                            <div>
+                            <div class="caixa_logo">
                                 <img src="JavaScript-logo.png" alt="" width="250px" height="150px" data-anime="top" id="anime2">
                             </div>
 
-                            <div>
+                            <div class="caixa_logo">
                                 <img src="css3.png" alt="" width="110px" height="150px" data-anime="top" id="anime3">
                             </div>
-                            <div>
+                            <div class="caixa_logo">
                                 <img src="mysql.png" alt="" width="150px" height="150px" data-anime="top" id="anime4">
                             </div>
 
-                            <div>
+                            <div class="caixa_logo">
                                 <img src="bootstrap.png" alt="" width="150px" height="150px" data-anime="top" id="anime5">
                             </div>
                         </div>
@@ -222,7 +222,7 @@
                                         <h3 class="display-4 text-light pt-5">Dashboard</h3>
                                     </div>
                                     <div class="col-md-9 caixa-texto">
-                                        <p class="font-monospace ps-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
+                                        <p class="font-monospace ps-3">Dashboard desenvolvido apenas com cunho didático, bem simples e dinâmico, afim de aplicar requisições Ajax, juntamente ao PHP e JavaScript.</p>
                                     </div>
                                 </div>
                             </a>
@@ -232,7 +232,7 @@
                                         <h3 class="display-4 text-light pt-4">Tela de Login</h3>
                                     </div>
                                     <div class="col-md-9 caixa-texto">
-                                        <p class="font-monospace ps-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
+                                        <p class="font-monospace ps-3">Uma página de Login, simples e funcional, com estapa de <i>Login</i> e <i>Cadastro</i>, tendo base no MySQL com PHP e JavaScript, junto ao Front-End Inteiramente feito com HTML, CSS e Bootstrap.</p>
                                     </div>
                                 </div>
                             </a>
@@ -242,7 +242,7 @@
                                         <h3 class="display-4 text-light pt-4">Landing Page</h3>
                                     </div>
                                     <div class="col-md-9 caixa-texto">
-                                        <p class="font-monospace ps-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eius inventore et tenetur consequatur, adipisci velit quisquam, esse praesentium, beatae sit non in eum saepe maxime repudiandae officiis dicta.</p>
+                                        <p class="font-monospace ps-3">Projeto desenvolvido com base em uma landing page, de forma genérica. Utilizando basicamente CSS e HTML, COM JavaScript para gerenciamento de emails.</p>
                                     </div>
                                 </div>
                             </a>
@@ -261,13 +261,9 @@
         
     </footer>
     
-    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 </body>
 </html>

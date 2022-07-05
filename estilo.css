@@ -22,11 +22,6 @@ p {
     z-index: 1;
 }
 
-.capa {
-
-    margin-top: 100px;
-}
-
 .links {
     font-weight: bold;
 }
@@ -41,15 +36,9 @@ p {
     padding-top: 8px;
 }
 
-.texto-automatico {
-    font-size: 30px;
-    padding: 40px 10px 10px 100px;
-}
-
 .foto {
     border: 10px solid white;
     border-radius: 100%;
-    margin-left: 30px;
 }
 
 .descricao {
@@ -141,23 +130,6 @@ a:hover {
     background-color: white;
 }
 
-.certificado-foto {
-    width: 150px;
-    height: 150px;
-    border-color: #5EA1DB;
-    background-color: #5EA1DB;
-    text-align: center;
-}
-
-.certificado-corpo {
-    background-color: #b5d7fae8;
-    text-align: center;
-}
-
-
-header {
-    background-color: #5EA1DB;
-}
 .capa h1 {
     font-size: 85px;
 }
@@ -187,27 +159,6 @@ footer {
     color: white;
 }
 
-@media (max-width: 765px) {
-    .ft {
-        flex-wrap: wrap;
-    }
-
-    .imagem {
-        height: 200px;
-        background-color: #212529;
-        background-size: cover;
-        border-radius: 10px 10px 0px 0px;
-        text-align: center;
-        padding-top: 30px;
-    }
-
-    .caixa-texto {
-        background-color: white;
-        border-radius: 0px 0px 10px 10px;
-        
-    }
-}
-
 a {
     text-decoration: none;
 }
@@ -233,8 +184,75 @@ a {
     transition: .10s;
 }
 
-.animate-info {
-    padding: 30px;
-    height: 100px;
+@media (min-width: 756px) {
+
+    
+    .animate-info {
+        padding: 30px;
+        height: 200px;
+    }
+
+    .capa {
+
+        margin-top: 100px;
+    }
+
+    .texto-automatico {
+        font-size: 30px;
+        padding: 40px 10px 10px 100px;
+    }
+}
+@media (max-width: 765px) {
+
+    .capa {
+
+        margin-top: 30px;
+    }
+
+    .ft {
+        flex-wrap: wrap;
+    }
+
+    .texto-automatico {
+        font-size: 30px;
+        padding: 40px 10px 10px 20px;
+    }
+
+    .imagem {
+        height: 200px;
+        background-color: #212529;
+        background-size: cover;
+        border-radius: 10px 10px 0px 0px;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .caixa-texto {
+        background-color: white;
+        border-radius: 0px 0px 10px 10px;
+        
+    }
+
+    .caixa_logo {
+        padding: 10px;
+    }
+
+    .animate-info {
+        padding: 30px;
+        height: 350px;
+    }
+
+    .texto-cabeca {
+        padding: 10px 0px 10px 30px;
+    }
+
+    .botoes {
+        width: 95vw;
+        z-index: 0;
+    }
+    
+    .botao-menu {
+        margin: 10px;
+    }
 }
 
