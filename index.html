@@ -4,124 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título Navegador-->
+
+    <!-- Título Navegador -->
 
     <title>Potifólio</title>
 
     <!-- Estilos -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <script src="https://kit.fontawesome.com/2134c11f77.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo/estilo.css">
 
-    <link rel="shortcut icon" href="icons8-portfólio-30.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/icons8-portfólio-30.png" type="image/x-icon">
 
     <!-- Scripts -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script>
-        $(document).ready( ()=> {
-            $('#bt1').on('click', () => {
-                window.open('https://github.com/B1ELL20', '_blank')
-            })
-
-            $('#bt2').on('click', () => {
-                window.open('https://www.linkedin.com/in/gabriel-dantas-056451230', '_blank')
-            })
-
-            const alvo = document.querySelectorAll('[data-anime]');
-
-            window.addEventListener('scroll', () => {
-                const windowtop = window.pageYOffset + 750;
-                alvo.forEach((e) => {
-                    if ((windowtop) > e.offsetTop) {
-
-                        e.classList.add('animate')
-                    } else {
-
-                        e.classList.remove('animate')
-                    }
-                    
-                })
-            })
-            
-            $('#anime1').hover(function() {
-                $('#caixa-conteudo').addClass('animate-info')
-                $.get('html5.html', data => {
-                    $('#caixa-conteudo').html(data)
-                })
-            }, function() {
-                $('#caixa-conteudo').removeClass('animate-info')
-            })
-
-            $('#anime2').hover(() => {
-                $('#caixa-conteudo').addClass('animate-info')
-                $.get('js.html', data => {
-                    $('#caixa-conteudo').html(data)
-                })
-            }, function() {
-                $('#caixa-conteudo').removeClass('animate-info')
-            })
-
-            $('#anime3').hover(() => {
-                $('#caixa-conteudo').addClass('animate-info')
-                $.get('css.html', data => {
-                    $('#caixa-conteudo').html(data)
-                })
-            }, function() {
-                $('#caixa-conteudo').removeClass('animate-info')
-            })
-
-            $('#anime4').hover(() => {
-                $('#caixa-conteudo').addClass('animate-info')
-                $.get('mysql.html', data => {
-                    $('#caixa-conteudo').html(data)
-                })
-            }, function() {
-                $('#caixa-conteudo').removeClass('animate-info')
-            })
-
-            $('#anime5').hover(() => {
-                $('#caixa-conteudo').addClass('animate-info')
-                $.get('boots.html', data => {
-                    $('#caixa-conteudo').html(data)
-                })
-            }, function() {
-                $('#caixa-conteudo').removeClass('animate-info')
-            })
-
-            const elemento = document.getElementById('#texto-superior')
-            const texto = "print(Hello World!) <br>...<br> Hello World! <br> <br> De um programador para o mundo!     "
-
-            let texto_separado = texto.split("")
-            
-            let texto_junto = ''
-
-            let count = 0;
-
-            const funcao = setInterval(() => {
-                texto_junto += texto_separado[count]
-                $('#texto-superior').html(texto_junto);
-                count += 1;
-                if(count >= texto_separado.length) {
-                    $('#texto-superior').html('');
-                    texto_junto = ''
-                    count = 0
-                }
-            }, 120) 
-        })
-
-    </script>
+    <script src="script/script.js"></script>
 
 </head>
+
 <body>
+
     <nav id="navegacao" class="navbar navbar-expand-md p-1">
         <div class="container-fluid">
+
             <button class="navbar-toggler text-light botao-menu" data-toggle="collapse" data-target="#navbarmenu">
                 <i class="fas fa-bars fa-lg text-light"></i>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarmenu">
                 <div class="navbar-nav ms-auto me-5 text-light">
                     <a href="#cabeca" class="nav-link links p-3" id="links_id">HOME</a>
@@ -129,26 +43,37 @@
                     <a href="#conhecimentos" class="nav-link links p-3" id="links_id">CONHECIMENTOS</a>
                     <a href="#projetos" class="nav-link links p-3" id="links_id">O QUE FIZ</a>
                 </div>
+
             </div>
         </div>
     </nav>
+
     <header class="cabeca" id="cabeca">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 capa">
+
                     <div class="d-flex justify-content-center flex-wrap capa">
+
                         <h1 class="display-3 mb-4 text-light texto-cabeca">Gabriel Dantas</h1>
+
                         <h4 class="mb-5 text-light">Dev Full-Stack</h4>
+
                         <div class="input-group mb-2 botoes">
+
                             <button class="form-control bt1 btn btn-outline-light" id="bt1">
                                 <i class="fa-brands fa-github pe-1"></i>GitHub
                             </button>
+
                             <button class="form-control bt2 btn btn-outline-light btn-lg" id="bt2">
                                 <i class="fa-brands fa-linkedin pe-1"></i>Linkedin
                             </button>
+
                         </div>
                     </div>
+
                 </div>
+
                 <div class="col-md-6 capa">
                     <div class="">
                         <p class="text-light font-monospace texto-automatico" id="texto-superior">
@@ -156,9 +81,11 @@
                         </p>
                     </div>
                 </div>
+
             </div>
         </div>
     </header>
+
     <main>
         <div class="container">
             <section class="row d-flex justify-content-around mb-5" id="sobre-mim">
@@ -166,16 +93,18 @@
 
                     <h1 class="display-1 text-dark mb-5">QUEM SOU?</h1>
   
-                    <p class="p-1 descricao">Me chamo <strong>Gabriel Dantas Costa Carneiro</strong>, sou um desenvolvedor full-stack voltado a HTML, CSS, Bootstrap, JavaScript, Jquery, PHP e MySQL. Venho caminhando por esse mundo da programação cerca de 1 ano, desenvolvendo, aprendendo e evoluindo, em busca de sites cada vez mais incriveis e profissionais!</p>
+                    <p class="p-1 descricao">Me chamo <strong>Gabriel Dantas Costa Carneiro</strong>, sou um desenvolvedor full-stack voltado a HTML, CSS, Bootstrap, JavaScript, Jquery, PHP e MySQL. Venho caminhando por esse mundo da programação há cerca de 1 ano, desenvolvendo, aprendendo e evoluindo, em busca de sites cada vez mais incriveis e profissionais!</p>
 
                     <br>
 
                     <p class="p-1 descricao">Com conhecimentos desde o basico HTML até OO e estrutura MVC, me dedico ao ramo de desenvolvimento Web, no qual também criei esse portifólio com apenas JavaScript, CSS e HTML.</p>
 
                 </div>
+
                 <div class="col-md-5 mt-5 d-flex justify-content-center" class="caixa-foto">
-                    <img src="desenho.jpeg" alt="Minha foto" width="400px" height="450px" class="foto">
+                    <img src="imagens/desenho.jpeg" alt="Minha foto" width="400px" height="450px" class="foto">
                 </div>
+
             </section>
             
             <hr>
@@ -183,34 +112,36 @@
             <section id="conhecimentos">
                 <div class="row">
                     <div class="col">
-                        <h1 class="display-1 text-dark mb-5">O que sei</h1>
+
+                        <h1 class="display-1 text-dark mb-5">Conhecimentos</h1>
+
                         <div class="d-flex justify-content-md-between pb-5 pt-5 flex-wrap justify-content-center">
                             <div class="caixa_logo">
-                                <img src="html.webp" alt="" width="150px" height="150px" data-anime="top" id="anime1">
+                                <img src="imagens/html.webp" alt="" width="150px" height="150px" data-anime="top" id="anime1">
                             </div>
 
                             <div class="caixa_logo">
-                                <img src="JavaScript-logo.png" alt="" width="250px" height="150px" data-anime="top" id="anime2">
+                                <img src="imagens/JavaScript-logo.png" alt="" width="250px" height="150px" data-anime="top" id="anime2">
                             </div>
 
                             <div class="caixa_logo">
-                                <img src="css3.png" alt="" width="110px" height="150px" data-anime="top" id="anime3">
+                                <img src="imagens/css3.png" alt="" width="110px" height="150px" data-anime="top" id="anime3">
                             </div>
                             <div class="caixa_logo">
-                                <img src="mysql.png" alt="" width="150px" height="150px" data-anime="top" id="anime4">
+                                <img src="imagens/mysql.png" alt="" width="150px" height="150px" data-anime="top" id="anime4">
                             </div>
 
                             <div class="caixa_logo">
-                                <img src="bootstrap.png" alt="" width="150px" height="150px" data-anime="top" id="anime5">
+                                <img src="imagens/bootstrap.png" alt="" width="150px" height="150px" data-anime="top" id="anime5">
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
 
             <section>
-                <div class="text-light bg-dark box-info mb-5" id="caixa-conteudo">
-                </div>
+                <div class="text-light bg-dark box-info mb-5" id="caixa-conteudo"></div>
             </section>
 
             <hr>
@@ -218,35 +149,43 @@
             <section id="projetos">
                 <div class="container">
                     <div class="row">
+
                         <h1 class="display-1 titulos mb-5 text-dark">Projetos</h1>
-                        <div class="col">    
-                            <a href="http://appmydashboard.epizy.com/index.html" target="_blank">
+
+                        <div class="col">
+
+                            <a href="http://appmydashboard.epizy.com/index.html" target="_blank" id="pj1">
                                 <div class="row caixa caixa-projeto cxpj bg-light text-dark" >
                                     <div class="col-md-3 imagem img1" id="img1">
                                         <h3 class="display-4 text-light pt-5">Dashboard</h3>
                                     </div>
+
                                     <div class="col-md-9 caixa-texto">
-                                        <p class="font-monospace ps-3">Dashboard desenvolvido apenas com cunho didático, bem simples e dinâmico, afim de aplicar requisições Ajax, juntamente ao PHP e JavaScript.</p>
+                                        <p class="font-monospace ps-3" id="texto1">Dashboard desenvolvido apenas com cunho didático, bem simples e dinâmico, afim de aplicar requisições Ajax, juntamente ao PHP e JavaScript.</p>
                                     </div>
                                 </div>
                             </a>
-                            <a href="http://paginalogin.epizy.com/" target="_blank">
+
+                            <a href="http://paginalogin.epizy.com/" target="_blank" id="pj2">
                                 <div class="row caixa caixa-projeto mt-5 cxpj text-black">
                                     <div class="col-md-3 img2 imagem" id="img2">
                                         <h3 class="display-4 text-light pt-4">Tela de Login</h3>
                                     </div>
+
                                     <div class="col-md-9 caixa-texto">
-                                        <p class="font-monospace ps-3">Uma página de Login, simples e funcional, com estapa de <i>Login</i> e <i>Cadastro</i>, tendo base no MySQL com PHP e JavaScript, junto ao Front-End Inteiramente feito com HTML, CSS e Bootstrap.</p>
+                                        <p class="font-monospace ps-3" id="texto2">Uma página de Login, simples e funcional, com estapa de <i>Login</i> e <i>Cadastro</i>, tendo base no MySQL com PHP e JavaScript, junto ao Front-End Inteiramente feito com HTML, CSS e Bootstrap.</p>
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://b1ell20.github.io/landingPage/index.html" target="_blank">
+
+                            <a href="https://b1ell20.github.io/landingPage/index.html" target="_blank" id="pj3">
                                 <div class="row caixa caixa-projeto mt-5 mb-5 cxpj text-black">
                                     <div class="col-md-3 imagem img3" id="img3">
                                         <h3 class="display-4 text-light pt-4">Landing Page</h3>
                                     </div>
+
                                     <div class="col-md-9 caixa-texto">
-                                        <p class="font-monospace ps-3">Projeto desenvolvido com base em uma landing page, de forma genérica. Utilizando basicamente CSS e HTML, COM JavaScript para gerenciamento de emails.</p>
+                                        <p class="font-monospace ps-3" id="texto3">Projeto desenvolvido com base em uma landing page, de forma genérica. Utilizando basicamente CSS e HTML, COM JavaScript para gerenciamento de emails.</p>
                                     </div>
                                 </div>
                             </a>
@@ -255,12 +194,26 @@
                 </div>
             </section>
         </div>
+        <div class="d-inline">
+            <button id="link_info" class="btn btn-lg"><i class="fa-solid fa-circle-info text-dark"></i></button>
+            <div id="info">
+                <p class="info m-2">Os Projetos mostrados foram realizados somente com objetivo didático, sem cunho financeiro ou qualquer retorno monetário.</p>
+            </div>
+        </div>
     </main>
     <footer class="bg-dark">
-        <div class="text-light d-flex justify-content-center mt-2 flex-sm-wrap ft"><p class="d-inline mr-3 ml-3"><i class="fa-solid fa-envelope h4 pe-1"></i> email: dantasbiell20@gmail.com</p>
+
+        <div class="text-light d-flex justify-content-center mt-2 flex-sm-wrap ft">
+            
+            <p class="d-inline mr-3 ml-3"><i class="fa-solid fa-envelope h4 pe-1"></i> Email: dantasbiell20@gmail.com</p>
              <p class="d-inline ps-3 pe-3"></p>
-             <a href="https://github.com/B1ELL20" target="_blank" class="text-light h3 pe-3 ps-3"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/gabriel-dantas-056451230" class="text-light h3 pe-3 ps-3"><i class="fa-brands fa-linkedin"></i></a>
+
+            <div class="caixa_footer">
+                <a href="https://github.com/B1ELL20" target="_blank" class="text-light h3 pe-3 ps-3"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gabriel-dantas-056451230" target="_blank" class="text-light h3 pe-3 ps-3"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.behance.net/bielldantas20/" target="_blank" class="text-light h3 pe-3 ps-3"><i class="fa-brands fa-behance-square"></i></a>
+            </div>
+
         </div>
         
     </footer>
